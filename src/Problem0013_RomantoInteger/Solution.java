@@ -3,6 +3,11 @@ package Problem0013_RomantoInteger;
 /*
     LeetCode Problem 13: Roman to Integer
     Given a Roman Numeral convert it into a valid integer
+
+    Key Idea: iterate through the given string and when
+              a number of low value is succeeded by a higher
+              value number, then subtract current number from
+              the result.
  */
 
 import java.util.HashMap;
