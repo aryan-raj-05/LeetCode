@@ -1,15 +1,15 @@
 package Problem0020_ValidParenthesis;
 
-import java.util.Stack;
+import java.util.ArrayDeque;
 
 public class Solution {
     public boolean isValid(String s) {
-        Stack<Character> stk = new Stack<>();
+        ArrayDeque<Character> stk = new ArrayDeque<>();
         for (int i = 0; i < s.length(); i++) {
             if (isOpenBracket(s.charAt(i)))
-                stk.add(s.charAt(i));
-            else if (isCloseBracket(s.charAt(i)) && !stk.isEmpty() && isPair(stk.peek(), s.charAt(i)))
-                stk.pop();
+                stk.addFirst(s.charAt(i));
+            else if (isCloseBracket(s.charAt(i)) && !stk.isEmpty() && isPair(stk.peekFirst(), s.charAt(i)))
+                stk.removeFirst();
             else
                 return false;
         }
