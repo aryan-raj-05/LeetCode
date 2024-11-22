@@ -1,0 +1,19 @@
+package Problem0094_BinaryTreeInorderTraversal;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        inorder(root, res);
+        return res;
+    }
+
+    private void inorder(TreeNode root, List<Integer> l) {
+        if (root == null)       return;
+        inorder(root.left, l);
+        l.add(root.val);
+        inorder(root.right, l);
+    }
+}
