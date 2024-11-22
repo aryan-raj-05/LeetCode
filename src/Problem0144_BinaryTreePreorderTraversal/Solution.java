@@ -5,6 +5,8 @@ import java.util.List;
 
 public class Solution {
     public List<Integer> preorderTraversal (TreeNode root) {
+        // solved using recursion
+        // will solve in iterative method later
         List<Integer> nums = new ArrayList<>();
         preorder(root, nums);
         return nums;
