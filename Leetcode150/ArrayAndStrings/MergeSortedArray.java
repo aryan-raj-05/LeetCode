@@ -1,7 +1,7 @@
 package Leetcode150.ArrayAndStrings;
 
 // Problem 88
-class Solution {
+public class MergeSortedArray {
     public void merge(int[] nums1, int[] nums2, int m, int n) {
         int i = m - 1;
         int j = n - 1;

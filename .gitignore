@@ -1,3 +1,6 @@
 *.out
 *.class
 .vscode/
+.idea/
+LeetCode.iml
+out/
